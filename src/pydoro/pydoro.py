@@ -1,9 +1,11 @@
 from textual.app import App, ComposeResult
 from textual.widgets import Footer, Header
 
+from pydoro.utils.logging_config import setup_logger
+
 
 class Pydoro(App):
-    """A Textual app using a pomodoro timer"""
+    """A Pomodor timer application using Textual, written in Pyhton"""
 
     BINDINGS = [("d", "toggle_dark", "Toggle dark mode")]
 
@@ -19,4 +21,5 @@ def main():
 
 
 if __name__ == "__main__":
+    setup_logger()
     main()
